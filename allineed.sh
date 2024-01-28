@@ -3,7 +3,8 @@
 cd ~
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    sudo apt-get install ninja-build gettext cmake unzip curl
+    sudo apt-get -y install ninja-build gettext cmake unzip curl
+    sudo apt -y install build-essential libssl-dev
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     xcode-select --install
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
